@@ -26,7 +26,9 @@ body{
   width:100%;  
   transition:all .2s ;  
   padding: 5px 0 ;
+  
 }
+
 .navigation > div {
     width:1200px;
     margin:0 auto;
@@ -34,10 +36,25 @@ body{
     display:flex;
     justify-content:space-between;
     align-items:center;
+    
 }
+
+@media only screen and (max-width: 1200px) {
+    .navigation {
+        height:110px;
+        width:100%;
+        
+    }
+    .navigation > div {
+        flex-direction: column;
+        padding-top:2.5rem;
+        font-size: 0.8rem;
+    }
+  }
 .links {
     display:flex;
     align-items:center;
+    
 }
 .links > button {
     background-color:#ffbe0b;
@@ -79,7 +96,14 @@ a {
     position:relative;
     margin-top:-50px;
     padding-top:10rem;
+    width:100%;
 }
+
+@media only screen and (max-width: 1200px) {
+    .section-container {
+      flex-direction: column;
+    }
+  }
 
 .section-container:after {
     content:"";
@@ -102,6 +126,11 @@ a {
 .firstContent img {
     width:500px;    
 }
+@media only screen and (max-width: 1200px) {
+    .firstContent img {
+      width:250px;
+    }
+  }
 @keyframes shake {
     0% {transform : translateY(-3px)}
     50% {transform : translateY(3px)}
@@ -113,8 +142,12 @@ a {
 .secondContent {
     /* background-color: red; */
     height:50%;
-    width:600px;
+    width:100%;
+    max-width: 700px;
     z-index:10;
+}
+.secondContent > p {
+    text-align: center;
 }
 .header2 {
     color:white;
@@ -122,6 +155,23 @@ a {
     font-weight:900;
     font-size: 3rem;
       
+}
+
+@media only screen and (max-width: 1200px) {
+    .header2 {
+      font-size:2rem;
+      display:flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+    .navigation > div{
+        transform:scale(0.8);
+        width:100%;
+        margin:0 auto;
+        padding:0 auto;
+    }
+
 }
 
 
@@ -137,8 +187,10 @@ span {
     color:#b9b9b9;
 
 }
+
+
 .section-container2 {
-    height:50vh;
+    height:auto;
     /* background-color:red; */
     display:flex;
     justify-content: center;
@@ -147,9 +199,13 @@ span {
     gap:1rem;
 }
 
+
+
 .box1 , .box2 {
-    width:1100px;
-    height:300px;
+    padding-top:3rem;
+    height:auto;
+    width:100%;
+    max-width: 1100px;    
     /* background-color:blue; */
 }
 
@@ -212,6 +268,8 @@ span {
     margin-top:4rem;
     display:flex;
     justify-content: center;
+    align-items: center;
+    /* flex-direction: column; */
 
 }
 
@@ -237,11 +295,16 @@ span {
 .promo .yellow  {
     padding-top : 3rem;
     padding-left : 1rem;
-}
-.promo .yellow {
     color:#FFBA00;
     font-weight: bold;
 }
+
+@media only screen and (max-width: 1200px) {
+    .promo .yellow  {
+      padding-top: 0;
+    }
+  }
+
 
 .promo  h2 {
     color:White;
@@ -249,11 +312,12 @@ span {
     padding-left : 1rem;
 }
 
-.promo p {
-    padding-top : 1rem;
+.promop {
+    /* padding-top : 1rem; */
     padding-left : 1rem;
     color:#b9b9b9;
 }
+
 
 .promoFoto {
     padding-top:1rem;
@@ -266,14 +330,6 @@ span {
 .best-container {
     margin-top : 5rem; 
     height: 100vh;
-}
-.post1 {
-    display:flex;
-    align-items: center;
-    flex-direction: column;
-}
-
-.best-container {
     display:flex;
     flex-direction: column;
     align-items: center;
@@ -281,6 +337,14 @@ span {
     max-height: auto; */
     height:auto;
 }
+.post1 {
+    display:flex;
+    /* align-items: center; */
+    text-align: center;;
+    flex-direction: column;
+}
+
+
 .bigContainer {
     display:flex;
     justify-content: center;
@@ -342,20 +406,22 @@ span {
 .sub-container  {
     padding-top:3rem;
     padding-bottom:2rem;
-    width: 99vw;
+    width: 100%;
     background-color:#FFBA00;
     display:flex;
     justify-content: center;
     
 }
-.gelismeler-container > h1 {
-    font-size:2rem;
-}
-
 
 .gelismeler-container {
     width:550px;
 }
+.gelismeler-container > h1 {
+    font-size:2rem;
+}
+
+ 
+
 .input {
     display:flex;
     justify-content: center;
@@ -380,6 +446,7 @@ button {
     display:flex;
     justify-content: center;
     align-items: center;
+    
 }
 .lastSocial {
     display:flex;
@@ -408,3 +475,63 @@ button {
 }
 
 
+@media only screen and (max-width: 1200px) {
+    .box1  {
+      flex-direction: column;
+      height: 100%;
+      
+    }
+
+    .box2 {
+        flex-direction: column;
+        margin-top:1rem;
+    }
+    .section-container2 {
+        height:100%;
+    }
+
+   
+
+    .box2 .card2 {
+   
+        display:flex;
+        margin: 0 1rem;
+        width: 400px;
+        height:250px;
+        background-color:#171717;
+        border-radius:10px;
+        margin:2rem;
+        
+    }
+    .navigation > div {
+        justify-content: center;
+    }
+    .sub-container {
+        flex-direction: column;
+        justify-content:center;
+        align-items: center;
+        
+    }
+    .gelismeler-container > h1 {
+        font-size:1rem;
+
+    }
+
+    .gelismeler-container {
+        width:250px;
+    }
+
+    .input > input {
+        border-radius:10px;
+        width:250px;
+        height:35px;
+    }
+    .input > button {
+        margin:0 1rem;
+        background-color:black;
+        color:White;
+        width:75px;
+        height:40px;
+        border-radius:25px;
+    }
+  }
