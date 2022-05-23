@@ -1,1 +1,1 @@
-# Burgry
+https://lysoths.github.io/Burgry/
